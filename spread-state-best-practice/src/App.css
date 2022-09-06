@@ -1,0 +1,22 @@
+*{
+  box-sizing: border-box;
+}
+.app{
+  width:50vw;
+  height:500px;
+  margin:0 auto;
+  margin-top:100px;
+  border:1rem solid red;
+  text-align: center;
+
+}
+.app input{
+  width:100%;
+  max-width: 250px;
+  margin-bottom:1rem!important;
+  margin:0 auto;
+  display: block;
+}
+.btn_add{
+  padding:.5rem;
+}

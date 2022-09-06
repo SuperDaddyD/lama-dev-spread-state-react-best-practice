@@ -1,22 +1,36 @@
 
+import React,{useState} from 'react';
+import "./App.css"
 
 function App() {
+  const [input,setInput] = useState('');
+  
+  const [user,setUser] = useState({
+    name:'',
+    email:'',
+    images:['profile.png','cover.png']
+  })
+  
+  const handleInputChange=(e)=>{
+     setInput(e.target.value)
+  }
+
+  const handleUser =()=>{
+    setUser((prev)=>({
+      ...prev,
+      name:input
+    }))
+  }
+
+
   return (
-    <div className="">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h2>User:{user.name}</h2>
+      <input type="text"
+      onChange={(e)=>handleInputChange(e)}
+       />
+       <button className='btn_add' onClick={handleUser}>Change User</button>
+        {user?.name && <p className="setUser">Username is :{user.name}</p>}
     </div>
   );
 }
