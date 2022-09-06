@@ -2,11 +2,11 @@
   box-sizing: border-box;
 }
 .app{
+  padding-top:3rem;
   width:50vw;
   height:500px;
   margin:0 auto;
   margin-top:100px;
-  border:1rem solid red;
   text-align: center;
 
 }
@@ -19,4 +19,6 @@
 }
 .btn_add{
   padding:.5rem;
+  width:100%;
+  max-width: 250px;
 }
